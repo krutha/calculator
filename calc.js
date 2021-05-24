@@ -24,13 +24,11 @@ reader.question("What would you like to calculate?", function(input){
 	if(mathSymbol === '/'){
 		console.log(num1+num2)
 	}
-	// This line closes the connection to the command line interface.
-	reader.close()
-	if (mathSymbol === "sqr"){
+  if (mathSymbol === "sqr"){
         console.log(Math.pow(num1,2))
     }
-    if (mathSymbol === "cube"){
-        console.log(Math.pow(num1,3))
+   if (mathSymbol === "cbrt"){
+        console.log(Math.cbrt(num1,num2))
     }
     if (mathSymbol === "pow"){
         console.log(Math.pow(num1,num2))
@@ -38,5 +36,6 @@ reader.question("What would you like to calculate?", function(input){
     if (mathSymbol === "mod"){
         console.log(num1 % num2)
     }
-
+	// This line closes the connection to the command line interface.
+	reader.close()
 });
